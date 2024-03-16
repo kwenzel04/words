@@ -3,7 +3,23 @@ const words = ["ab","Abend","aber","acht","Affe","alle","allein(e)","als","also"
 let currentIndex = 0;
 
 function displayWord() {
-    document.getElementById("wordDisplay").textContent = words[currentIndex];
+    const wordDisplay = document.getElementById("wordDisplay");
+    wordDisplay.textContent = words[currentIndex];
+
+    // Reset font size to a base value to calculate adjustments
+    let baseFontSize = 100; // Starting point for font size in pixels
+    wordDisplay.style.fontSize = `${baseFontSize}px`;
+
+    // Calculate the adjustment needed to make the word take up 80% of the viewport width
+    const viewportWidth = window.innerWidth;
+    const wordWidth = wordDisplay.offsetWidth;
+    const desiredWidth = viewportWidth * 0.6; // 80% of the viewport width
+
+    // Adjust font size based on the ratio of desired width to initial word width
+    const adjustedFontSize = baseFontSize * (desiredWidth / wordWidth);
+
+    // Apply the adjusted font size
+    wordDisplay.style.fontSize = `${adjustedFontSize}px`;
 }
 
 function nextWord() {
