@@ -12,12 +12,21 @@ body, html {
 }
 
 .word-display {
-    margin-top: 100px;
-    font-size: 8vw;
-    min-height: 60vh;
+    flex-grow: 1; /* Allows this section to grow and fill available space */
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 24px;
+    text-align: center;
+    min-height: 20vh;
+    min-width: 80vw;
+    background-color: #ffffff; /* White background */
+    border: 2px solid #d0d0d0; /* Light grey border */
+    margin: 20px; /* Adds some space around the card */
+    margin-bottom: 100px;
+    padding: 20px; /* Adds space inside the card */
+    border-radius: 10px; /* Rounded corners for the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 button {
@@ -26,4 +35,43 @@ button {
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
+}
+
+.stopwatch {
+    position: fixed; /* Keeps the stopwatch at the top */
+    top: 20px; /* Distance from the top of the viewport */
+    left: 50%; /* Centers the element */
+    transform: translateX(-50%); /* Ensures it's centered regardless of its width */
+    font-size: 20px; /* Stopwatch font size */
+    background-color: #f8f9fa; /* Light background color */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.word-count {
+    position: fixed;
+    top: 80px; /* Adjusted to place below the stopwatch */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    background-color: #f8f9fa;
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes flipCard {
+    from {
+        transform: rotateY(180deg);
+        color:white;
+    }
+    to {
+        transform: rotateY(360deg);
+        color:black;
+    }
+}
+
+.flip-effect {
+    animation: flipCard 0.3s ease-in-out;
 }
