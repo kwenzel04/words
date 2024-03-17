@@ -1,4 +1,10 @@
-
+@font-face { 
+    font-family: "Grundschrift";
+    font-style: normal;
+    font-weight: 400;
+    src: 
+      url(/fonts/Grundschrift-Regular.otf) format("opentype");
+  }
 
 body, html {
     height: 100%;
@@ -20,7 +26,7 @@ body, html {
     align-items: center;
     font-size: 24px;
     text-align: center;
-    font-family: 'GrundschriftRegular';
+    font-family: 'Grundschrift';
     font-weight: normal;
     font-style: normal; 
     min-height: 20vh;
