@@ -18,12 +18,17 @@ body, html {
     text-align: center;
 }
 
+.container2 {
+    text-align: center;
+}
+
+
 .word-display {
     flex-grow: 1; /* Allows this section to grow and fill available space */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 60px;
     text-align: center;
     font-family: 'GrundschriftRegular';
     font-weight: normal;
@@ -46,6 +51,8 @@ button {
     margin: 5px;
     cursor: pointer;
 }
+
+
 
 .stopwatch {
     position: fixed; /* Keeps the stopwatch at the top */
